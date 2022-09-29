@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+    font-family: normalfont;
+    src: url(assets/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2);
+}
+@font-face{
+    font-family: mediumfont;
+    src: url(assets/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2);
+}
+@font-face{
+    font-family: boldfont;
+    src: url(assets/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2);
+}
+body{
+    font-family: normalfont;
+}
+header{
+    /* width: 100%; */
+    padding: 14px 24px 0px;
+    /* background-color: aqua; */
+
+}
+
+.search-box-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    min-width: 285px;
+    max-width: 100%;
+    border: 0.5px solid rgb(0, 0, 0, 0.08);
+    border-radius: 1000px;
+    box-shadow: 0px 3px 10px rgb(0 0 0 /10%);
+    
+    /* background-color: blue; */
+    
+}
+.search-text-container{
+    display: flex;
+    align-items:center ;
+    /* justify-content: center; */
+    width: 100%;
+    height: 100%;
+    /* background-color: burlywood; */
+}
+.search-icon{
+    padding: 0 20px;
+}
+.where-text{
+    font-size: 14px;
+    color: #222222;
+    font-family: mediumfont;
+    display: flex;
+}
+
+.any-text-card{
+    display: flex;
+    color: #717171;
+    font-size: 12px;
+}
+.any-text-card .dot{
+    padding: 0 5px;
+}
+.any-text-card span{
+    overflow: hidden;
+    text-overflow:clip;
+    white-space: nowrap;
+    min-width: 10px;
+}
+
+
+.mic-card{
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+}
+.mic-box{
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0, 0.24);
+    
+}
+.mic-box svg{
+    margin: 10px;
+}
+
+
+
+
+.icon-container{
+    display: flex;
+    overflow: scroll;
+    padding: 0 24px;
+    gap: 10%;
+    border-bottom: 0.5px solid rgb(0, 0, 0, 0.08);
+    /* box-shadow:  0px 0px 10px rgb(0 0 0 /10%); */
+     box-shadow: 1px 1px  10px -8px rgb(0 0 0 /0.7);
+    
+}
+.icon-container::-webkit-scrollbar{
+    display: none;
+}
+.icon-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0 0;
+    padding: 4px 0 14px;
+    gap: 5px;
+}
+.icon-image img{
+    width: 24px;
+    height: 24px;
+    filter: opacity(0.7);
+}
+.icon-card:hover .icon-image img{
+    filter: opacity(100);
+    /* width: 50px; */
+    
+}
+.icon-card:hover .icon-text span{
+    color: #222222;
+}
+.icon-card:hover{
+    border-bottom: 2px solid #222222;
+}
+.icon-text span{
+    white-space: nowrap;
+    font-size: 12px;
+    color: #717171;
+    font-family: mediumfont;
+}
+section{
+    padding: 0 24px;
+}
+.picture{
+    position: relative;
+    border-radius: 10px;
+    height: 55%;
+    width: 100%;
+    
+}
+.picture img{
+    position:absolute;
+    z-index: 0;
+    /* object-fit: cover; */
+    /* top: 30px; */
+    width: 100%;
+    height: 100%;
+    /* height: 100%; */
+    border-radius: inherit;
+}
+.like{
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    /* right: 10px; */
+    
+}
+.like svg{
+    /* filter: opacity(0.2); */
+}
