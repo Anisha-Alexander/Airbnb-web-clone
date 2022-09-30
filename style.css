@@ -21,13 +21,24 @@ body{
     background-color: white;
     position:fixed;
     z-index: 1000;
-    display: block;
+    display: block; 
 }
 header{
-    /* width: 100%; */
-    padding: 14px 24px 0px;
+    width: 100vw;
+    /* margin: 14px 24px 0px; */
     /* background-color: aqua; */
+    /* position: fixed; */
 
+}
+.air-logo-container{
+    display: none;
+}
+.host-user-container{
+    display: none;
+}
+.new-element{
+    /* background-color: yellow; */
+    padding: 14px 24px 0;
 }
 
 .search-box-container{
@@ -73,25 +84,27 @@ header{
 .any-text-card span{
     overflow: hidden;
     text-overflow:ellipsis;
-    white-space: nowrap;
     min-width: 10px;
 }
 .anywhere{
-    min-width:22px;
+    /* min-width:22px;
     width:10%;
-    max-width: 100%;
+    max-width: 100%; */
     overflow: hidden;
+    white-space: nowrap;
     text-overflow:ellipsis;
 
 }
 .anyweek{
-    width:10px;
+    min-width:10px;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow:ellipsis;
 }
 .addguests{
     width:10px;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow:ellipsis;
 }
 
@@ -165,10 +178,13 @@ section{
     max-width: 1120px;
     width: auto;
 }
+.picture-place-card{
+    /* height: fit-content; */
+}
 .picture{
     position: relative;
     border-radius: 10px;
-    height: 55%;
+    height:79%;
     width: 100%;
     background-color: aqua;
     
@@ -224,4 +240,100 @@ section{
     font-family: boldfont;
 
 
+}
+
+@media screen and (min-width:550px){
+    section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .picture{
+        height: 78%;
+    }
+    .picture img{
+        height: 100%;
+    }
+}
+@media screen and (min-width:744px){
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        padding: 0 40px;
+        align-items: center;
+        justify-content: space-between;
+        width: 91vw;
+    }
+    .new-element{
+        /* padding: 0 24px; */
+        display: flex;
+        padding-left: 0;
+        align-items: center;
+
+    }
+    .search-box-container{
+        margin: 0 24px;
+        
+    }
+    .air-logo-container{
+        display: flex;
+    }
+    .logo{
+        color:#ff385c;
+    }
+    .dot{
+        display: none;
+    }
+    .where-text{
+        display: none;
+    }
+    .mic-card{
+        display: none;
+    }
+    .search-text-container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .any-text-card{
+        padding-left: 24px;
+    }
+
+
+
+    .host-user-container{
+        display: flex;
+    }
+    .host-globe-card{
+        display: flex;
+    }
+    .become{
+        padding: 12px;
+        font-size: 14px;
+        font-family: mediumfont;
+        color: #222222;
+    }
+    .globe{
+        padding:12px;
+    }
+    .hamburger-user-card{
+        display: flex;
+        align-items: center;
+        border-radius: 21px;
+        border: 1px solid #717171;
+        padding: 5px 5px 5px 12px;
+    }
+    .hamburger-icon{
+        color: #222222;
+    }
+    .user-icon{
+        margin-left: 12px;
+    }
+    .user-icon svg{
+        width: 30px;
+        height: 30px;
+        filter: opacity(0.5);
+    }
 }
