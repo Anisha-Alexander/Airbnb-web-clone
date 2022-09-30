@@ -21,6 +21,7 @@ body{
     background-color: white;
     position:fixed;
     z-index: 1000;
+    display: block;
 }
 header{
     /* width: 100%; */
@@ -47,7 +48,7 @@ header{
     display: flex;
     align-items:center ;
     /* justify-content: center; */
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     /* background-color: burlywood; */
 }
@@ -76,18 +77,20 @@ header{
     min-width: 10px;
 }
 .anywhere{
-    width:1PX;
+    min-width:22px;
+    width:10%;
+    max-width: 100%;
     overflow: hidden;
     text-overflow:ellipsis;
 
 }
 .anyweek{
-    width:1PX;
+    width:10px;
     overflow: hidden;
     text-overflow:ellipsis;
 }
 .addguests{
-    width:1PX;
+    width:10px;
     overflow: hidden;
     text-overflow:ellipsis;
 }
@@ -155,6 +158,7 @@ header{
 }
 section{
     padding: 0 24px;
+    padding-top: 175px;
     display: flex;
     flex-direction: column;
     gap:40px;
@@ -162,10 +166,11 @@ section{
     width: auto;
 }
 .picture{
-    /* position: relative; */
+    position: relative;
     border-radius: 10px;
     height: 55%;
     width: 100%;
+    background-color: aqua;
     
 }
 .picture img{
@@ -180,14 +185,12 @@ section{
 }
 .like{
     position: absolute;
-    /* top: 10px; */
-    /* z-index: 1; */
-    /* right: 10px; */
+    stroke: white;
+    top: 20px;    
+    right:20px;
     
 }
-.like svg{
-    /* filter: opacity(0.2); */
-}
+
 .place-rating-container{
     display: flex;
     justify-content: space-between;
