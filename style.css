@@ -107,7 +107,9 @@ header{
     white-space: nowrap;
     text-overflow:ellipsis;
 }
-
+.mic-card-two{
+    display: none;
+}
 .mic-card{
     /* background-color: aquamarine; */
     display: flex;
@@ -116,7 +118,7 @@ header{
 }
 .mic-box{
     border-radius: 50%;
-    border: 1px solid rgb(0, 0, 0, 0.24);
+    border: 1px solid #dddddd;
     
 }
 .mic-box svg{
@@ -241,6 +243,152 @@ section{
 
 
 }
+/* article */
+article{
+    border-top: 1px solid #dddddd;
+    margin-top: 44px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+article h2{
+    font-size: 19px;
+    font-family: normalfont;
+    font-weight: 600;
+    color: #222222;
+    text-align: center;
+}
+.show-more-box{
+    padding: 12px 23px;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    margin: 24px 0 84px;
+
+}
+
+/* aside */
+aside{
+    padding: 0 24px;
+    color: #222222;
+    padding-bottom: 72px;
+}
+aside h2{
+    font-size: 22px;
+}
+.things{
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 20px;
+
+}
+.things p{
+    font-size: 14px;
+    width: fit-content;
+    border-bottom: 1px solid #222222;
+    padding: 10px 0;
+    margin-top: 6px;
+    font-weight: 600;
+}
+.fplace-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+.fplace-part{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.fplace-card{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.fplace-card span{
+    color: #717171;
+}
+.show-underline{
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* footer */
+footer{
+    /* background-color: #dddddd; */
+    padding: 0 24px;
+    color: #222222;
+    font-size: 14px;    
+}
+.foot-head-container{
+    display: flex;
+    flex-direction: column;
+}
+.foot-card{
+    display: flex;
+    flex-direction: column;
+    /* gap: 12px; */
+    padding: 0 0 24px;
+    margin-bottom: 24px;
+    border-bottom:1px solid #dddddd;
+    /* background-color: #ff385c; */
+
+}
+.foot-card h2{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+.foot-card p{
+    margin-top: 12px;
+}
+.lang-ruppee-card{
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+}
+.globe-lang{
+    display: flex;
+    gap: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 24px;
+}
+.ruppee{
+    margin-right: 24px;
+}
+.final-container{
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0;
+}
+.privacy span{
+   margin: 3px;
+}
+.s-dot{
+    padding-bottom: 3px;
+}
+.show-map{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: white;
+    background-color:  rgb(34,34,34);
+    width: fit-content;
+    padding: 12px 19px;
+    border-radius: 24px;
+    position: fixed;
+    bottom: 0;
+    right: 50vw;
+    left: 50vw;
+    white-space: nowrap;
+    /* height: 100vh; */
+}
 
 @media screen and (min-width:550px){
     section{
@@ -274,6 +422,7 @@ section{
     }
     .search-box-container{
         margin: 0 24px;
+        height: 52px;
         
     }
     .air-logo-container{
@@ -291,20 +440,67 @@ section{
     .mic-card{
         display: none;
     }
+    
     .search-text-container{
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;
+        min-width: 348px;
     }
     .any-text-card{
-        padding-left: 24px;
+        /* padding-left: 24px; */
+        overflow: visible;
+        width: 100%;
     }
+    .any-text-card span{
+        padding: 0 16px;
+        /* min-width:50px; */
+        width: 100%;
+        font-size: 14px;
+        font-family: mediumfont;
+        color: #222222;
+    }
+    .anywhere{
+        width: 100%;
+        overflow: visible;
+    }
+    .anyweek{
+        width: 100%;
+        height: 100%;
+        border-left: 2px solid #dddddd;
+        border-right: 2px solid #dddddd;
+    }
+    .addguests{
+        width: 100%;
+        overflow: visible;
+        
+    }
+    .addguests span{
+        color: #717171;
+        font-family: normalfont;
+    }
+    .search-icon{
+        background-color: #ff385c;
+        width: fit-content;
+        padding: 10px;
+        margin-right: 7px;
+        border-radius: 50%;
+        
+    }
+    .search-icon svg{
+        color: white;
+    }
+    .any-text-card{
+        display: flex;
+        flex-direction: row;
 
-
+        
+    }
 
     .host-user-container{
         display: flex;
+        gap: 3px;
     }
     .host-globe-card{
         display: flex;
@@ -314,6 +510,7 @@ section{
         font-size: 14px;
         font-family: mediumfont;
         color: #222222;
+        white-space: nowrap;
     }
     .globe{
         padding:12px;
@@ -322,7 +519,7 @@ section{
         display: flex;
         align-items: center;
         border-radius: 21px;
-        border: 1px solid #717171;
+        border: 1px solid #dddddd;
         padding: 5px 5px 5px 12px;
     }
     .hamburger-icon{
@@ -335,5 +532,71 @@ section{
         width: 30px;
         height: 30px;
         filter: opacity(0.5);
+    }
+    .pink-dot{
+        border-radius: 50%;
+        /* background-color: #ff385c; */
+        color: #ff385c;
+        width: fit-content;
+        height: fit-content;
+        font-size: 87px;
+        position: fixed;
+        z-index: 100;
+        top: -58px;
+        right: 12px;
+        -webkit-text-stroke: 1.5px white;
+    }
+
+    nav{
+        /* background-color: aqua; */
+    }
+    .mic-card-two{
+        display: flex;
+        gap: 20px;
+        /* position: absolute; */
+        align-items: center;
+        position: fixed;
+        background-color: white;
+        right: 0;
+        padding-right: 40px;
+        padding-bottom: 3px;
+        z-index: 10;
+    }
+    .mic-box{
+        display: flex;
+        border: 1px solid #dddddd;
+        align-items: center;
+        background-color:white;
+        border-radius: 12px;
+        padding: 7px 0px;
+    }
+    .arrow-box{
+        border-radius: 100%;
+        border: 1px solid #dddddd;
+        display: flex;
+        padding: 6px 12px;
+        height: fit-content;
+        margin: 20px;
+        margin-right: 0;
+    }
+    .arrow-box i{
+        /* padding: 5px; */
+        border-radius: inherit;
+        font-size: larger;
+    }
+    .filter{
+        padding-right: 16px;
+    }
+    /* footer */
+    .foot-part{
+        display: flex;
+    }
+    .foot-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .foot-column{
+        display: flex;
+        flex-direction: column;
     }
 }
