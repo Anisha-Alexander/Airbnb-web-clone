@@ -49,7 +49,9 @@ header {
     /* background-color: yellow; */
     padding: 14px 24px 0;
 }
-
+.air-logo-container-desk{
+    display: none;
+}
 .search-box-container {
     display: flex;
     justify-content: space-between;
@@ -239,6 +241,48 @@ section {
     right: 20px;
 
 }
+.swipe{
+    position: absolute;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    bottom: 10px;
+    left: 40%;
+    width: 50%;
+    /* background-color: #ff385c; */
+
+}
+.swipe-one{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color:white;
+}
+.swipe-two{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color:#b3b3b3;
+    
+}
+.swipe-three{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+}
+.swipe-four{
+    width: 6px;
+    height: 6px;
+    border-radius: 60%;
+    background-color: #b3b3b3;
+}
+.swipe-five{
+    width: 5px;
+    height: 5px;
+    border-radius: 70%;
+    background-color:  #b3b3b3;
+}
 
 .place-rating-container {
     display: flex;
@@ -399,7 +443,9 @@ footer {
 .foot-card p {
     margin-top: 12px;
 }
-
+.final-container-fixed{
+    display: none;
+}
 .lang-ruppee-card {
     display: flex;
     font-weight: 600;
@@ -654,6 +700,8 @@ footer {
     }
     .icon-container{
         padding: 0 40px;
+        border: none;
+        box-shadow: none;
     }
 
     .mic-card-two {
@@ -731,11 +779,50 @@ footer {
     }
 
     .final-container {
+        display: none;
+    }
+    .final-container-fixed{
+        padding: 13px 0px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        /* width: 100%; */
+        border-top: 1px solid #dddddd;
+        position: fixed;
+        bottom: 0;
+        z-index: 1001;
+        background-color: white;
+    }
+    .final-card{
+        display: flex;        
+        justify-content: flex-start;
+        width: 100%;
+        gap: 2px;
+        flex-wrap: wrap;
+        padding-left: 40px;
+    }
+    .lang-ruppee-card{
+        width: 100%;
+        justify-content: flex-end;
+        padding-right: 40px;
         align-items: center;
     }
-
+    .lang-ruppee-card span i{
+        font-size: 20px;
+        margin-left: 3px;
+    }
+    .copyright{
+        white-space: nowrap;
+    }
+    .privacy{
+        white-space: nowrap;
+    }
+    .ruppee{
+        white-space: nowrap;
+    }
     .lang-social-container {
         display: flex;
+        margin-bottom: 65px;
     }
 
     .social-card {
@@ -752,6 +839,68 @@ footer {
     }
     .new-element{
         width: 100%;
-        justify-content: safe;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width:1200px){
+    header{
+        width: 87vw;
+        padding: 0 80px;
+        padding-bottom: 10px;
+    }
+    .new-element{
+        width: 60vw;
+    }
+    .icon-container{
+        padding: 0 80px;
+        gap: 4%;
+    }
+    .mic-card-two{
+        padding-right: 80px;
+    }
+    section{
+        grid-template-columns: repeat(4,1fr);
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 200px;
+    }
+    .air-logo-container{
+        display: none;        
+    }
+    .air-logo-container-desk{
+        display: flex;
+    }
+    aside{
+        padding: 0 80px;
+    }
+    
+    footer{
+        padding: 24px 80px;
+    }
+    .foot-head-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .foot-card{
+        border: none;
+    }
+    .foot-head-container{
+        border-bottom: 1px solid #dddddd;
+    }
+    .footer-foot-container{
+        padding-top: 20px;
+    }
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .final-card{
+        padding-left: 80px;
+    }
+    .lang-ruppee-card{
+        padding-right: 80px;
+    }
+    .lang-social-container{
+        display: none;
     }
 }
